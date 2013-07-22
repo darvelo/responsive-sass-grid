@@ -14,6 +14,7 @@ $responsive-media-col-expand: 768px !default;
 /*
  * Editable Stylesheet Building Blocks
  */
+$responsive-classes-enable: true !default;
 $responsive-row-class: 'row' !default; // ex. <ul class="row">
 $responsive-column-class-prefix: 'col' !default; // ex. <li class="col-12">
 $responsive-column-offset-class-prefix: 'col-offset' !default; // ex. <li class="col-5 col-offset-3">
@@ -129,39 +130,41 @@ $responsive-column-offset-class-prefix: 'col-offset' !default; // ex. <li class=
 /*
  * Responsive Classes
  */
-.#{$responsive-row-class} {
-  @include responsive-row-collapsed;
-}
-
-%responsive-column-collapsed-extension {
-  @include responsive-column-collapsed;
-}
-@for $i from 1 through $responsive-num-columns {
-  .#{$responsive-column-class-prefix}-#{$i} {
-    @extend %responsive-column-collapsed-extension;
-  }
-}
-
-@media screen and (min-width: $responsive-media-col-expand) {
+@if $responsive-classes-enable == true {
   .#{$responsive-row-class} {
-    @include responsive-row-expanded;
+    @include responsive-row-collapsed;
   }
 
-  %responsive-column-expanded-extension {
-    @include responsive-column-expanded;
+  %responsive-column-collapsed-extension {
+    @include responsive-column-collapsed;
   }
   @for $i from 1 through $responsive-num-columns {
     .#{$responsive-column-class-prefix}-#{$i} {
-      @extend %responsive-column-expanded-extension;
-      @include responsive-column-expanded-width($i);
+      @extend %responsive-column-collapsed-extension;
     }
   }
 
-  // offsets must be defined after col-s for the cascade's sake,
-  // since offsets must take higher priority than col-s
-  @for $i from 1 through $responsive-num-columns - 1 {
-    .#{$responsive-column-offset-class-prefix}-#{$i} {
-      @include responsive-offset-expanded($i);
+  @media screen and (min-width: $responsive-media-col-expand) {
+    .#{$responsive-row-class} {
+      @include responsive-row-expanded;
+    }
+
+    %responsive-column-expanded-extension {
+      @include responsive-column-expanded;
+    }
+    @for $i from 1 through $responsive-num-columns {
+      .#{$responsive-column-class-prefix}-#{$i} {
+        @extend %responsive-column-expanded-extension;
+        @include responsive-column-expanded-width($i);
+      }
+    }
+
+    // offsets must be defined after col-s for the cascade's sake,
+    // since offsets must take higher priority than col-s
+    @for $i from 1 through $responsive-num-columns - 1 {
+      .#{$responsive-column-offset-class-prefix}-#{$i} {
+        @include responsive-offset-expanded($i);
+      }
     }
   }
 }
