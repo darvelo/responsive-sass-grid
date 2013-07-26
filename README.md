@@ -43,7 +43,7 @@ $responsive-total-gutters-width: 20% !default;
 $responsive-media-col-expand: 768px !default;
 ```
 
-#### `$responsive-total-columns`
+##### `$responsive-total-columns`
 Default: `12`
 
 Defines the number of columns a row can contain. This enables you
@@ -52,7 +52,7 @@ disproportionately. For instance, five equal-width elements wouldn't
 space evenly in a 12-column grid. But they could in a 10-column grid.
 As a global variable, `12` is a flexible default.
 
-#### `$responsive-row-width`
+##### `$responsive-row-width`
 Default: `100%`
 
 Defines the width of the row that will be used to calculate the
@@ -60,7 +60,7 @@ widths and gutters of the columns. Even though a row takes up
 100% of its container, this variable effectively limits the total
 width all combined columns and gutters will take inside the row.
 
-#### `$responsive-total-gutters-width`
+##### `$responsive-total-gutters-width`
 Default: `20%`
 
 Defines the total width of the `$responsive-row-width` that will be taken
@@ -70,7 +70,7 @@ and represents the total width of `n-1` gutters, where `n` is the number
 of columns. Column widths are calculated from the space left over after
 total gutter width is calculated.
 
-#### `$responsive-media-col-expand`
+##### `$responsive-media-col-expand`
 Default: `768px`
 
 Defines the media query breakpoint at which columns will expand from stacked,
@@ -105,27 +105,27 @@ All mixins take the optional arguments:
 ##### `$expand`
 Default: `$responsive-media-col-expand`
 
-#### `$row-width`
+##### `$row-width`
 Default: `$responsive-row-width`
 
-#### `$total-gutters-width`
+##### `$total-gutters-width`
 Default: `$responsive-total-gutters-width`
 
-#### `$total-cols`
+##### `$total-cols`
 Default: `$responsive-total-columns`
 
 The `col-span` and `col-offset` mixins are special in that they
 also take `$span-size` and `$offset-size` arguments, respectively.
 
-#### `$span-size`
+##### `$span-size`
 
 The amount of columns the element should expand to.
 
-#### `$offset-size
+##### `$offset-size`
 
 The amount of columns the left margin of the element should expand to.
 
-Please keep in mind that specified arguments should be applied
+**Note:** Please keep in mind that specified arguments should be applied
 to a row and all its children. For instance, if you define
 `$total-cols: 10` in a `row` mixin, you also need to define it for
 direct descendents of that row which include the `col-span` or `col-offset`
@@ -230,7 +230,7 @@ You can define a custom amount of columns for a specific row with:
   @include row($total-cols: 10);
 }
 
-.description-left, description-right {
+.description-left, .description-right {
   // this tells the mixin to make each description
   // element 2 columns wide in a 10-column grid
   @include col-span(2, $total-cols: 10);
