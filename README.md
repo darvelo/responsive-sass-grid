@@ -306,3 +306,8 @@ if you create an element with `col-span(5, $total-gutters-width: 50%)`,
 that element is taking up a significant portion of the total gutter width
 that was proportioned out based on there being 12 columns total. Check the
 tests under the header `Test Variable Total Gutter Width` to see examples.
+
+
+## Changelog
+
+* `0.1.0` - Add ability to change any variable for any mixin. Change width and gutter algorithms. Add licenses.
