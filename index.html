@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <link rel="stylesheet" href="grid.css" />
+  <style>
+    html * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      margin-top: 50px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+    .container {
+      /*margin: 0 auto;*/
+      margin-bottom: 30px;
+      /*width: 700px;*/
+    }
+    .container div {
+      overflow: auto;
+      margin-bottom: 2px;
+    }
+    .container div div {
+      text-align: center;
+      border-radius: 3px;
+      background: #DDD;
+      height: 20px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://github.com/darvelo/responsive-sass-grid"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+
+  <h1>Test Responsive Classes</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-3">3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">3</div>
+      <div class="col-3">3</div>
+      <div class="col-3">3</div>
+      <div class="col-3">3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">4</div>
+      <div class="col-3">3</div>
+      <div class="col-3">3</div>
+      <div class="col-2">2</div>
+    </div>
+
+    <div class="row">
+      <div class="col-4">4</div>
+      <div class="col-4 col-offset-4">4 offset 4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-3">3</div>
+      <div class="col-offset-2 col-1">1 offset 2</div>
+      <div class="col-offset-1 col-2">2 offset 1</div>
+      <div class="col-3">3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-offset-3 col-5">5 offset 3</div>
+      <div class="col-offset-3 col-1">1 offset 3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-12">12</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1 col-offset-1">1 offset 1</div>
+    </div>
+
+    <div class="row">
+      <div class="col-2 col-offset-2">2 offset 2</div>
+    </div>
+
+    <div class="row">
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+      <div class="col-1">1</div>
+    </div>
+
+    <div class="row">
+      <div class="col-3 col-offset-3">3 offset 3</div>
+    </div>
+
+    <div class="row">
+      <div class="col-4 col-offset-4">4 offset 4</div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 col-offset-5">5 offset 5</div>
+    </div>
+
+    <div class="row">
+      <div class="col-6 col-offset-6">6 offset 6</div>
+    </div>
+
+    <div class="row">
+      <div class="col-7">7</div>
+    </div>
+    <div class="row">
+      <div class="col-8">8</div>
+    </div>
+    <div class="row">
+      <div class="col-9">9</div>
+    </div>
+    <div class="row">
+      <div class="col-10">10</div>
+    </div>
+    <div class="row">
+      <div class="col-11">11</div>
+    </div>
+    <div class="row">
+      <div class="col-12">12</div>
+    </div>
+
+    <div class="row">
+      <div class="col-5 col-offset-7">5 offset 7</div>
+    </div>
+    <div class="row">
+      <div class="col-4 col-offset-8">4 offset 8</div>
+    </div>
+    <div class="row">
+      <div class="col-3 col-offset-9">3 offset 9</div>
+    </div>
+    <div class="row">
+      <div class="col-2 col-offset-10">2 offset 10</div>
+    </div>
+    <div class="row">
+      <div class="col-1 col-offset-11">1 offset 11</div>
+    </div>
+
+    <h1>Test Custom Media Query Breakpoint</h1>
+    <div class="breakpoint">
+      <div class="two-sides">Breakpoint 480px</div>
+      <div class="two-sides">Breakpoint 480px</div>
+    </div>
+
+    <h1>Test Custom Total Num Columns</h1>
+    <div class="columns-10">
+      <div class="five-times">2 -- 10 columns</div>
+      <div class="five-times">2 -- 10 columns</div>
+      <div class="five-times">2 -- 10 columns</div>
+      <div class="five-times">2 -- 10 columns</div>
+      <div class="five-times">2 -- 10 columns</div>
+    </div>
+
+    <div class="columns-10">
+      <div class="four-times">2 -- 10 columns</div>
+      <div class="four-times">2 -- 10 columns</div>
+      <div class="four-times right-side">2 offset 2 -- 10 columns</div>
+      <div class="four-times">2 -- 10 columns</div>
+    </div>
+
+    <h1>Test Custom Row Width - 50%</h1>
+    <div class="half-width">
+      <div class="three-times">4 -- 50% row width</div>
+      <div class="three-times">4 -- 50% row width</div>
+      <div class="three-times">4 -- 50% row width</div>
+    </div>
+
+    <div class="half-width-right">
+      <div class="three-times">5 -- 15-col -- 50%</div>
+      <div class="three-times">5 -- 15-col -- 50%</div>
+      <div class="three-times">5 -- 15-col -- 50%</div>
+    </div>
+
+    <div class="row">
+      <div class="col-2">2 -- 100% row width</div>
+      <div class="col-2">2 -- 100% row width</div>
+      <div class="col-2">2 -- 100% row width</div>
+      <div class="col-2">2 -- 100% row width</div>
+      <div class="col-2">2 -- 100% row width</div>
+      <div class="col-2">2 -- 100% row width</div>
+    </div>
+
+    <h1>Test Variable Total Gutter Width</h1>
+    <div class="gutter-large">
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+      <div class="size-1">50% total gutter</div>
+    </div>
+
+    <div class="gutter-large">
+      <div class="size-2">2 - 50% total gutter</div>
+      <div class="size-2">2 - 50% total gutter</div>
+      <div class="size-2">2 - 50% total gutter</div>
+      <div class="size-2">2 - 50% total gutter</div>
+      <div class="size-2">2 - 50% total gutter</div>
+      <div class="size-2">2 - 50% total gutter</div>
+    </div>
+
+    <div class="gutter-large-2-25pct">
+      <div class="size-1">1 -- 2-column -- 25% gutter</div>
+      <div class="size-1">1 -- 2-column -- 25% gutter</div>
+    </div>
+
+    <div class="gutter-large-2-50pct">
+      <div class="size-1">1 -- 2-column -- 50% gutter</div>
+      <div class="size-1">1 -- 2-column -- 50% gutter</div>
+    </div>
+
+    <div class="gutter-small">
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+      <div class="size-1">5% total gutter</div>
+    </div>
+  </div>
+</body>
+</html>

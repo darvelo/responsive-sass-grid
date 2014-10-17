@@ -1,0 +1,78 @@
+@import 'responsive';
+
+.breakpoint {
+  @include row($expand: 480px);
+
+  .two-sides {
+    @include col-span(6, 480px);
+  }
+}
+
+.columns-10 {
+  @include row($total-cols: 10);
+
+  .four-times, .five-times {
+    @include col-span(2, $total-cols: 10);
+  }
+
+  .four-times.right-side {
+    @include col-offset(2, $total-cols: 10);
+  }
+}
+
+.half-width {
+  @include row($row-width: 50%);
+
+  .three-times {
+    @include col-span(4, $row-width: 50%);
+  }
+}
+
+.half-width-right {
+  @include row($total-cols: 15, $row-width: 50%);
+
+  .three-times {
+    @include col-span(5, $total-cols: 15, $row-width: 50%);
+
+    // you can also `float: right;` to take up the right 50%
+    @media screen and (min-width: $responsive-media-col-expand) {
+      float: right;
+    }
+  }
+}
+
+.gutter-large {
+  @include row($total-gutters-width: 50%);
+
+  .size-1 {
+    @include col-span(1, $total-gutters-width: 50%);
+  }
+
+  .size-2 {
+    @include col-span(2, $total-gutters-width: 50%);
+  }
+}
+
+.gutter-large-2-25pct {
+  @include row($total-cols: 2, $total-gutters-width: 25%);
+
+  .size-1 {
+    @include col-span(1, $total-cols: 2, $total-gutters-width: 25%);
+  }
+}
+
+.gutter-large-2-50pct {
+  @include row($total-cols: 2, $total-gutters-width: 50%);
+
+  .size-1 {
+    @include col-span(1, $total-cols: 2, $total-gutters-width: 50%);
+  }
+}
+
+.gutter-small {
+  @include row($total-gutters-width: 5%);
+
+  .size-1 {
+    @include col-span(1, $total-gutters-width: 5%);
+  }
+}
